@@ -1,0 +1,7 @@
+C:\Users\Mauricio\source\repos\RedSocial\DAL\bin\Debug\DAL.dll.config
+C:\Users\Mauricio\source\repos\RedSocial\DAL\bin\Debug\DAL.dll
+C:\Users\Mauricio\source\repos\RedSocial\DAL\bin\Debug\DAL.pdb
+C:\Users\Mauricio\source\repos\RedSocial\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Mauricio\source\repos\RedSocial\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Mauricio\source\repos\RedSocial\DAL\obj\Debug\DAL.dll
+C:\Users\Mauricio\source\repos\RedSocial\DAL\obj\Debug\DAL.pdb

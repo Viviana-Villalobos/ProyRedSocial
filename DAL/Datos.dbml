@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProyRedSocial" Class="DatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-VFAUC0I\SQLEXPRESS;Initial Catalog=ProyRedSocial;Integrated Security=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="ProyRedSocialConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.ActualizarROL" Method="ActualizarROL">
+    <Parameter Name="RolID" Parameter="rolID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreRol" Parameter="nombreRol" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EliminarROL" Method="EliminarROL">
+    <Parameter Name="RolID" Parameter="rolID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ActualizarUSUARIOS" Method="ActualizarUSUARIOS">
+    <Parameter Name="UsuarioID" Parameter="usuarioID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreUsuario" Parameter="nombreUsuario" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ApellidoUsuario" Parameter="apellidoUsuario" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="TelefonoUsuario" Parameter="telefonoUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CorreoUsuario" Parameter="correoUsuario" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FechaNacimiento" Parameter="fechaNacimiento" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Genero" Parameter="genero" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PassUsuario" Parameter="passUsuario" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Fecha_Registro" Parameter="fecha_Registro" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Rol_ID" Parameter="rol_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ConsultaROL" Method="ConsultaROL">
+    <Parameter Name="RolID" Parameter="rolID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaROLResult">
+      <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreRol" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultarROL" Method="ConsultarROL">
+    <ElementType Name="ConsultarROLResult">
+      <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreRol" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultarUSUARIOS" Method="ConsultarUSUARIOS">
+    <ElementType Name="ConsultarUSUARIOSResult">
+      <Column Name="UsuarioID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreUsuario" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ApellidoUsuario" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TelefonoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CorreoUsuario" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Genero" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PassUsuario" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Registro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Rol_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaUSUARIOS" Method="ConsultaUSUARIOS">
+    <Parameter Name="UsuarioID" Parameter="usuarioID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaUSUARIOSResult">
+      <Column Name="UsuarioID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreUsuario" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ApellidoUsuario" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TelefonoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CorreoUsuario" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Genero" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PassUsuario" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Registro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Rol_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CrearROL" Method="CrearROL">
+    <Parameter Name="NombreRol" Parameter="nombreRol" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CrearUSUARIOS" Method="CrearUSUARIOS">
+    <Parameter Name="NombreUsuario" Parameter="nombreUsuario" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ApellidoUsuario" Parameter="apellidoUsuario" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="TelefonoUsuario" Parameter="telefonoUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CorreoUsuario" Parameter="correoUsuario" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FechaNacimiento" Parameter="fechaNacimiento" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Genero" Parameter="genero" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PassUsuario" Parameter="passUsuario" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Fecha_Registro" Parameter="fecha_Registro" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Rol_ID" Parameter="rol_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EliminarUSUARIOS" Method="EliminarUSUARIOS">
+    <Parameter Name="UsuarioID" Parameter="usuarioID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
