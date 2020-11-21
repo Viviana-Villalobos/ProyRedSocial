@@ -120,11 +120,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ComentariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\COMENTARIOS.cs" />
     <Compile Include="Models\USUARIOS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -169,9 +172,15 @@
     <Content Include="Views\Usuario\Detalles.cshtml" />
     <Content Include="Views\Usuario\Crear.cshtml" />
     <Content Include="Views\Usuario\Eliminar.cshtml" />
+    <Content Include="Views\Comentarios\Index.cshtml" />
+    <Content Include="Views\Comentarios\Editar.cshtml" />
+    <Content Include="Views\Comentarios\Detalles.cshtml" />
+    <Content Include="Views\Comentarios\Crear.cshtml" />
+    <Content Include="Views\Comentarios\Eliminar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

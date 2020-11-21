@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsCOMENTARIOS.cs" />
     <Compile Include="clsRol.cs" />
     <Compile Include="clsUSUARIOS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

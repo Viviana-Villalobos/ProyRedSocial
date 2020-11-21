@@ -131,6 +131,41 @@ namespace DAL
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuarioID);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ActualizarCOMENTARIOS")]
+		public int ActualizarCOMENTARIOS([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ComentarioID", DbType="Int")] System.Nullable<int> comentarioID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Comentario", DbType="VarChar(200)")] string comentario, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FechaEnviado", DbType="DateTime")] System.Nullable<System.DateTime> fechaEnviado, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Usuario_ID", DbType="Int")] System.Nullable<int> usuario_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Reaccion_ID", DbType="Int")] System.Nullable<int> reaccion_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), comentarioID, comentario, fechaEnviado, usuario_ID, reaccion_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultaCOMENTARIOS")]
+		public ISingleResult<ConsultaCOMENTARIOSResult> ConsultaCOMENTARIOS([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ComentarioID", DbType="Int")] System.Nullable<int> comentarioID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), comentarioID);
+			return ((ISingleResult<ConsultaCOMENTARIOSResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultarCOMENTARIOS")]
+		public ISingleResult<ConsultarCOMENTARIOSResult> ConsultarCOMENTARIOS()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ConsultarCOMENTARIOSResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CrearCOMENTARIOS")]
+		public int CrearCOMENTARIOS([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Comentario", DbType="VarChar(200)")] string comentario, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FechaEnviado", DbType="DateTime")] System.Nullable<System.DateTime> fechaEnviado, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Usuario_ID", DbType="Int")] System.Nullable<int> usuario_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Reaccion_ID", DbType="Int")] System.Nullable<int> reaccion_ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), comentario, fechaEnviado, usuario_ID, reaccion_ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EliminarCOMENTARIOS")]
+		public int EliminarCOMENTARIOS([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ComentarioID", DbType="Int")] System.Nullable<int> comentarioID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), comentarioID);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	public partial class ConsultaROLResult
@@ -592,6 +627,202 @@ namespace DAL
 				if ((this._Rol_ID != value))
 				{
 					this._Rol_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ConsultaCOMENTARIOSResult
+	{
+		
+		private int _ComentarioID;
+		
+		private string _Comentario;
+		
+		private System.DateTime _FechaEnviado;
+		
+		private int _Usuario_ID;
+		
+		private int _Reaccion_ID;
+		
+		public ConsultaCOMENTARIOSResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComentarioID", DbType="Int NOT NULL")]
+		public int ComentarioID
+		{
+			get
+			{
+				return this._ComentarioID;
+			}
+			set
+			{
+				if ((this._ComentarioID != value))
+				{
+					this._ComentarioID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Comentario", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
+		public string Comentario
+		{
+			get
+			{
+				return this._Comentario;
+			}
+			set
+			{
+				if ((this._Comentario != value))
+				{
+					this._Comentario = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaEnviado", DbType="DateTime NOT NULL")]
+		public System.DateTime FechaEnviado
+		{
+			get
+			{
+				return this._FechaEnviado;
+			}
+			set
+			{
+				if ((this._FechaEnviado != value))
+				{
+					this._FechaEnviado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usuario_ID", DbType="Int NOT NULL")]
+		public int Usuario_ID
+		{
+			get
+			{
+				return this._Usuario_ID;
+			}
+			set
+			{
+				if ((this._Usuario_ID != value))
+				{
+					this._Usuario_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Reaccion_ID", DbType="Int NOT NULL")]
+		public int Reaccion_ID
+		{
+			get
+			{
+				return this._Reaccion_ID;
+			}
+			set
+			{
+				if ((this._Reaccion_ID != value))
+				{
+					this._Reaccion_ID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ConsultarCOMENTARIOSResult
+	{
+		
+		private int _ComentarioID;
+		
+		private string _Comentario;
+		
+		private System.DateTime _FechaEnviado;
+		
+		private int _Usuario_ID;
+		
+		private int _Reaccion_ID;
+		
+		public ConsultarCOMENTARIOSResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComentarioID", DbType="Int NOT NULL")]
+		public int ComentarioID
+		{
+			get
+			{
+				return this._ComentarioID;
+			}
+			set
+			{
+				if ((this._ComentarioID != value))
+				{
+					this._ComentarioID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Comentario", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
+		public string Comentario
+		{
+			get
+			{
+				return this._Comentario;
+			}
+			set
+			{
+				if ((this._Comentario != value))
+				{
+					this._Comentario = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaEnviado", DbType="DateTime NOT NULL")]
+		public System.DateTime FechaEnviado
+		{
+			get
+			{
+				return this._FechaEnviado;
+			}
+			set
+			{
+				if ((this._FechaEnviado != value))
+				{
+					this._FechaEnviado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usuario_ID", DbType="Int NOT NULL")]
+		public int Usuario_ID
+		{
+			get
+			{
+				return this._Usuario_ID;
+			}
+			set
+			{
+				if ((this._Usuario_ID != value))
+				{
+					this._Usuario_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Reaccion_ID", DbType="Int NOT NULL")]
+		public int Reaccion_ID
+		{
+			get
+			{
+				return this._Reaccion_ID;
+			}
+			set
+			{
+				if ((this._Reaccion_ID != value))
+				{
+					this._Reaccion_ID = value;
 				}
 			}
 		}

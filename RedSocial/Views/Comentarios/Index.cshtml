@@ -1,0 +1,57 @@
+﻿@model IEnumerable<RedSocial.Models.COMENTARIOS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear uno nuevo", "Crear")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ComentarioID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comentario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEnviado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reaccion_ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComentarioID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comentario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEnviado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reaccion_ID)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id = item.ComentarioID }) |
+            @Html.ActionLink("Ver más", "Detalles", new { id = item.ComentarioID }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id = item.ComentarioID })
+        </td>
+    </tr>
+}
+
+</table>

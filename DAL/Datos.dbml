@@ -84,4 +84,42 @@
     <Parameter Name="UsuarioID" Parameter="usuarioID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.ActualizarCOMENTARIOS" Method="ActualizarCOMENTARIOS">
+    <Parameter Name="ComentarioID" Parameter="comentarioID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Comentario" Parameter="comentario" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="FechaEnviado" Parameter="fechaEnviado" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Usuario_ID" Parameter="usuario_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Reaccion_ID" Parameter="reaccion_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ConsultaCOMENTARIOS" Method="ConsultaCOMENTARIOS">
+    <Parameter Name="ComentarioID" Parameter="comentarioID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaCOMENTARIOSResult">
+      <Column Name="ComentarioID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Comentario" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEnviado" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Reaccion_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultarCOMENTARIOS" Method="ConsultarCOMENTARIOS">
+    <ElementType Name="ConsultarCOMENTARIOSResult">
+      <Column Name="ComentarioID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Comentario" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEnviado" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Reaccion_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CrearCOMENTARIOS" Method="CrearCOMENTARIOS">
+    <Parameter Name="Comentario" Parameter="comentario" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="FechaEnviado" Parameter="fechaEnviado" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Usuario_ID" Parameter="usuario_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Reaccion_ID" Parameter="reaccion_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EliminarCOMENTARIOS" Method="EliminarCOMENTARIOS">
+    <Parameter Name="ComentarioID" Parameter="comentarioID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

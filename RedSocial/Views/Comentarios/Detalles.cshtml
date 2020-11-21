@@ -1,0 +1,58 @@
+﻿@model RedSocial.Models.COMENTARIOS
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>COMENTARIOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ComentarioID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComentarioID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comentario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comentario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEnviado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEnviado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reaccion_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reaccion_ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.ComentarioID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
