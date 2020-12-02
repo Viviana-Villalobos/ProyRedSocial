@@ -1,0 +1,48 @@
+﻿@model RedSocial.Models.Media
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Media</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreFoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreFoto)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomArchivoFoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomArchivoFoto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetalleFoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetalleFoto)
+        </dd>
+
+      
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.IdMedia }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<RedSocial.Models.Conversaciones>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Mensaje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEnviado)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.NombreUsuario1)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.NombreUsuario2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdConversacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdMensaje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mensaje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEnviado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuario1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreUsuario1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuario2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreUsuario2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.IdConversacion }) |
+            @Html.ActionLink("Details", "Details", new { id = item.IdConversacion }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdConversacion })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,54 @@
+﻿@model RedSocial.Models.Media
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Media</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreFoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreFoto)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomArchivoFoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomArchivoFoto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetalleFoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetalleFoto)
+        </dd>
+
+      
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<RedSocial.Models.Comentarios>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Comentario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEnviado)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.IdReaccion)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdComentario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comentario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEnviado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdReaccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdPublicacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.IdComentario }) |
+            @Html.ActionLink("Details", "Details", new { id = item.IdComentario }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdComentario })
+        </td>
+    </tr>
+}
+
+</table>

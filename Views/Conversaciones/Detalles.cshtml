@@ -1,0 +1,64 @@
+﻿@model RedSocial.Models.Conversaciones
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Conversaciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mensaje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mensaje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEnviado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEnviado)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuario1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuario1)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuario2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuario2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.IdConversacion}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
